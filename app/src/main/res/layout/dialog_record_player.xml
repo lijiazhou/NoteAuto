@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="450dp"
+    android:layout_height="120dp"
+    android:background="@color/colorPrimary">
+
+    <Button
+        android:layout_width="40"
+        android:layout_height="40"
+        android:id="@+id/buttonPlayRecord"
+        android:background="@drawable/play"
+        android:layout_x="150dp"
+        android:layout_y="70dp" />
+
+    <Button
+        android:layout_width="40"
+        android:layout_height="40"
+        android:id="@+id/buttonPauseStop"
+        android:background="@drawable/stop"
+        android:layout_x="250dp"
+        android:layout_y="70dp" />
+
+    <SeekBar
+        android:layout_width="367dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:background="@color/colorInitBackground"
+        android:layout_x="39dp"
+        android:layout_y="33dp" />
+    <View
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_button"
+        android:layout_margin="5dp"
+        android:id="@+id/playerExit"/>
+</AbsoluteLayout>

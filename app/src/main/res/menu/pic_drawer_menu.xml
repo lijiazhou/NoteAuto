@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menuSearch"
+        android:title="Search"
+        android:icon="@drawable/search"
+        app:showAsAction="ifRoom"
+        android:actionProviderClass="android.widget.ShareActionProvider" />
+    <item android:id="@+id/menuLast"
+        android:title="Last"
+        android:icon="@drawable/last"
+        app:showAsAction="ifRoom"
+        android:actionProviderClass="android.widget.ShareActionProvider" />
+    <item android:id="@+id/menuNext"
+        android:title="Next"
+        android:icon="@drawable/next"
+        app:showAsAction="ifRoom"
+        android:actionProviderClass="android.widget.ShareActionProvider" />
+    <item android:id="@+id/menuAdd"
+        android:title="New Page"
+        android:icon="@drawable/add_new"
+        app:showAsAction="ifRoom"
+        android:actionProviderClass="android.widget.ShareActionProvider" />
+
+    <item
+        android:id="@+id/menuDots"
+        android:title="dots"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:icon="@drawable/menu">
+
+        <menu>
+
+            <item android:id="@+id/menuCam"
+                android:icon="@drawable/camera"
+                android:title="Camera"/>
+            <item android:id="@+id/menuRecord"
+                android:icon="@drawable/voice_search"
+                app:showAsAction="ifRoom"
+                android:title="Record" />
+            <item android:id="@+id/menuCalculator"
+                android:icon="@drawable/calculator"
+                app:showAsAction="ifRoom"
+                android:title="Calculator" />
+            <item android:id="@+id/menuSave"
+                android:icon="@drawable/save"
+                app:showAsAction="ifRoom"
+                android:title="Save" />
+            <item android:id="@+id/menuDelete"
+                android:icon="@drawable/delete"
+                app:showAsAction="ifRoom"
+                android:title="Delete" />
+
+        </menu>
+
+    </item>
+
+</menu>
