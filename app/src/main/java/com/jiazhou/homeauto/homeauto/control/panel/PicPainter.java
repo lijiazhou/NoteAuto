@@ -235,9 +235,8 @@ public class PicPainter extends LinearLayout implements PanelBase {
     }
 
     private void showCalculator(){
-        CalculatorDialog calculatorDialog = new CalculatorDialog();
-        Activity parent = (Activity)context;
-        calculatorDialog.show(parent.getFragmentManager(), "");
+        CalculatorDialog calculatorDialog = new CalculatorDialog(context);
+        calculatorDialog.show();
     }
 
     @Override

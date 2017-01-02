@@ -32,7 +32,7 @@ public class MusicPlayerDialog extends Dialog {
     View exit;
 
     public MusicPlayerDialog(Context context, final String musicFile) {
-        super(context);
+        super(context, R.style.Dialog);
         setContentView(R.layout.dialog_record_player);
         setCancelable(false);
         this.musicFile = musicFile;

@@ -1,6 +1,8 @@
 package com.jiazhou.homeauto.homeauto.dialog;
 
+import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +23,7 @@ import java.util.ArrayList;
 /**
  * Created by lijiazhou on 6/11/16.
  */
-public class DataItemDialog extends DialogFragment {
+public class DataItemDialog extends Dialog {
 
     EditText txtName;
     Button txtClear;
@@ -30,15 +32,16 @@ public class DataItemDialog extends DialogFragment {
     DataItemMain dataItemMain;
     OnDialogDismissListener onDialogDismissListener;
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.dialog_create_document, container);
-        txtName = ControlPraser.PraserControl(view, R.id.txtName);
-        txtClear = ControlPraser.PraserControl(view, R.id.txtNameDelete);
 
-        nameOk = ControlPraser.PraserControl(view, R.id.nameOk);
-        nameCancel = ControlPraser.PraserControl(view, R.id.nameCancel);
+    public  DataItemDialog(Context context) {
+        super(context, R.style.Dialog);
+        setContentView(R.layout.dialog_create_document);
+        setCancelable(false);
+        txtName = ControlPraser.PraserControl(this, R.id.txtName);
+        txtClear = ControlPraser.PraserControl(this, R.id.txtNameDelete);
+
+        nameOk = ControlPraser.PraserControl(this, R.id.nameOk);
+        nameCancel = ControlPraser.PraserControl(this, R.id.nameCancel);
 
         txtClear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,12 +54,12 @@ public class DataItemDialog extends DialogFragment {
             @Override
             public void onClick(View v) {
                 if(txtName.getText().toString().isEmpty()) {
-                    Toast.makeText(view.getContext(), "Please enter the name!", Toast.LENGTH_LONG);
+                    Toast.makeText(getContext(), "Please enter the name!", Toast.LENGTH_LONG);
                     return;
                 }
 
                 if(DataStruct.searchByItemMianName(txtName.getText().toString().trim()) != -1){
-                    Toast.makeText(view.getContext(), "Item name already exists!", Toast.LENGTH_LONG);
+                    Toast.makeText(getContext(), "Item name already exists!", Toast.LENGTH_LONG);
                     return;
                 }
 
@@ -81,8 +84,6 @@ public class DataItemDialog extends DialogFragment {
                 dismiss();
             }
         });
-
-        return view;
     }
 
     public DataItemMain getDataItemMain() {

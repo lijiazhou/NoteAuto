@@ -5,16 +5,16 @@
     android:background="@color/colorPrimary">
 
     <Button
-        android:layout_width="40"
-        android:layout_height="40"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:id="@+id/buttonPlayRecord"
         android:background="@drawable/play"
         android:layout_x="150dp"
         android:layout_y="70dp" />
 
     <Button
-        android:layout_width="40"
-        android:layout_height="40"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:id="@+id/buttonPauseStop"
         android:background="@drawable/stop"
         android:layout_x="250dp"

@@ -1,5 +1,6 @@
 package com.jiazhou.homeauto.homeauto.activity;
 
+import android.app.Dialog;
 import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -56,12 +57,12 @@ public class NavActivity extends AppCompatActivity {
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
                 if (groupPosition == 0) {
-                    DataItemDialog dataItemDialog = new DataItemDialog();
-                    dataItemDialog.show(getFragmentManager(), "");
+                    DataItemDialog dataItemDialog = new DataItemDialog(NavActivity.this);
+                    dataItemDialog.show();
 
                     dataItemDialog.setOnDialogDismissListener(new OnDialogDismissListener() {
                         @Override
-                        public void OnDialogDismiss(DialogFragment dialog, DataItemMain dataItemMain) {
+                        public void OnDialogDismiss(Dialog dialog, DataItemMain dataItemMain) {
                             if (dataItemMain == null)
                                 return;
                             boolean[] expanded = new boolean[DataStruct.mainItems.size()];

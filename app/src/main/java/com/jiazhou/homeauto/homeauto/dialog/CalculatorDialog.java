@@ -1,6 +1,8 @@
 package com.jiazhou.homeauto.homeauto.dialog;
 
+import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +16,7 @@ import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
 /**
  * Created by lijiazhou on 15/11/16.
  */
-public class CalculatorDialog extends DialogFragment {
+public class CalculatorDialog extends Dialog {
 
     Button acButton;
     Button minusButton;
@@ -46,35 +48,34 @@ public class CalculatorDialog extends DialogFragment {
     boolean resulted;
     boolean hasDot;
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.dialog_calculator, container);
+    public  CalculatorDialog(Context context) {
+        super(context, R.style.Dialog);
+        setContentView(R.layout.dialog_calculator);
         setCancelable(false);
-        acButton = ControlPraser.PraserControl(view, R.id.buttonClear);
-        minusButton = ControlPraser.PraserControl(view, R.id.buttonMinus);
-        reminderButton = ControlPraser.PraserControl(view, R.id.reminder);
-        multipleButton = ControlPraser.PraserControl(view, R.id.buttonMultiple);
-        divideButton = ControlPraser.PraserControl(view, R.id.buttonDivide);
-        plusButton = ControlPraser.PraserControl(view, R.id.buttonPlus);
-        reduceButton = ControlPraser.PraserControl(view, R.id.buttomReduce);
-        equalButton = ControlPraser.PraserControl(view, R.id.buttonEqual);
+        acButton = ControlPraser.PraserControl(this, R.id.buttonClear);
+        minusButton = ControlPraser.PraserControl(this, R.id.buttonMinus);
+        reminderButton = ControlPraser.PraserControl(this, R.id.reminder);
+        multipleButton = ControlPraser.PraserControl(this, R.id.buttonMultiple);
+        divideButton = ControlPraser.PraserControl(this, R.id.buttonDivide);
+        plusButton = ControlPraser.PraserControl(this, R.id.buttonPlus);
+        reduceButton = ControlPraser.PraserControl(this, R.id.buttomReduce);
+        equalButton = ControlPraser.PraserControl(this, R.id.buttonEqual);
 
-        num0 = ControlPraser.PraserControl(view, R.id.num0);
-        num1 = ControlPraser.PraserControl(view, R.id.num1);
-        num2 = ControlPraser.PraserControl(view, R.id.num2);
-        num3 = ControlPraser.PraserControl(view, R.id.num4);
-        num5 = ControlPraser.PraserControl(view, R.id.num5);
-        num6 = ControlPraser.PraserControl(view, R.id.num6);
-        num7 = ControlPraser.PraserControl(view, R.id.num7);
-        num8 = ControlPraser.PraserControl(view, R.id.num8);
-        num9 = ControlPraser.PraserControl(view, R.id.num9);
-        num4 = ControlPraser.PraserControl(view, R.id.num4);
-        numDot = ControlPraser.PraserControl(view, R.id.numDot);
+        num0 = ControlPraser.PraserControl(this, R.id.num0);
+        num1 = ControlPraser.PraserControl(this, R.id.num1);
+        num2 = ControlPraser.PraserControl(this, R.id.num2);
+        num3 = ControlPraser.PraserControl(this, R.id.num4);
+        num5 = ControlPraser.PraserControl(this, R.id.num5);
+        num6 = ControlPraser.PraserControl(this, R.id.num6);
+        num7 = ControlPraser.PraserControl(this, R.id.num7);
+        num8 = ControlPraser.PraserControl(this, R.id.num8);
+        num9 = ControlPraser.PraserControl(this, R.id.num9);
+        num4 = ControlPraser.PraserControl(this, R.id.num4);
+        numDot = ControlPraser.PraserControl(this, R.id.numDot);
 
-        calnum = ControlPraser.PraserControl(view, R.id.calculatorNumber);
+        calnum = ControlPraser.PraserControl(this, R.id.calculatorNumber);
 
-        exit = ControlPraser.PraserControl(view, R.id.calculatorExit);
+        exit = ControlPraser.PraserControl(this, R.id.calculatorExit);
 
         acButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -196,6 +197,5 @@ public class CalculatorDialog extends DialogFragment {
                 }
             }
         });
-        return view;
     }
 }

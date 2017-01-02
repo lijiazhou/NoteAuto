@@ -31,9 +31,10 @@ public class CameraDialog extends Dialog {
     };
 
     public CameraDialog(Context context) {
-        super(context);
+        super(context, R.style.Dialog);
         this.setContentView(R.layout.dialog_cam_preview);
         setCancelable(false);
+        //getActionBar().hide();
         cap = ControlPraser.PraserControl(this, R.id.capture);
         cancel = ControlPraser.PraserControl(this, R.id.capCancel);
         frameLayout = ControlPraser.PraserControl(this, R.id.cameraPreview);
