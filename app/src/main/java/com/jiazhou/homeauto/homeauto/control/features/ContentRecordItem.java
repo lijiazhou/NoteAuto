@@ -2,6 +2,7 @@ package com.jiazhou.homeauto.homeauto.control.features;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.jiazhou.homeauto.homeauto.R;
+import com.jiazhou.homeauto.homeauto.interfaces.listener.OnContentClick;
 import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
 
 import java.io.File;
@@ -16,18 +18,26 @@ import java.io.File;
 /**
  * Created by lijiazhou on 20/11/16.
  */
-public class ContentRecordItem extends LinearLayout {
+public abstract class ContentRecordItem extends LinearLayout implements OnContentClick{
 
-    Button delete;
-    File file;
-    ImageView recordImage;
+    protected Button delete;
+    protected File file;
+    protected ImageView recordImage;
+    protected Context context;
 
-    public ContentRecordItem(Context context, File file) {
+    protected ContentRecordItem(Context context, File file) {
         super(context);
+        this.context = context;
         this.file = file;
         LayoutInflater.from(context).inflate(R.layout.item_content_record, this, true);
         delete = ControlPraser.PraserControl(this, R.id.recordDelete);
         recordImage = ControlPraser.PraserControl(this, R.id.recordImage);
+        setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onContentClick();
+            }
+        });
     }
 
     public void setDeleteClick(final OnClickListener onClickListener){
@@ -47,4 +57,5 @@ public class ContentRecordItem extends LinearLayout {
     public void setRecordImage(){
         recordImage.setImageBitmap(BitmapFactory.decodeFile(file.getPath()));
     }
+
 }

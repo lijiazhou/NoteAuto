@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -14,8 +15,10 @@ import android.widget.Toast;
 import com.jiazhou.homeauto.homeauto.R;
 import com.jiazhou.homeauto.homeauto.adapter.GridViewAdapter;
 import com.jiazhou.homeauto.homeauto.control.features.ContentRecordItem;
+import com.jiazhou.homeauto.homeauto.control.features.ImageContentRecordItem;
 import com.jiazhou.homeauto.homeauto.dataSet.DataItemMain;
 import com.jiazhou.homeauto.homeauto.dataSet.DataStruct;
+import com.jiazhou.homeauto.homeauto.dialog.ImageViewerDialog;
 import com.jiazhou.homeauto.homeauto.implementation.menuImp.MenuImpBase;
 import com.jiazhou.homeauto.homeauto.interfaces.PanelBase;
 import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
@@ -33,7 +36,7 @@ public class ImageContainer extends GridView implements PanelBase {
     ArrayList<File> files;
     ArrayList<View> contentRecordItems;
 
-    public ImageContainer(Context context, DataItemMain dataItemMain) {
+    public ImageContainer(final Context context, DataItemMain dataItemMain) {
         super(context);
         //LayoutInflater.from(context).inflate(R.layout.control_record_container, this, true);
         this.dataItemMain = dataItemMain;
@@ -41,14 +44,19 @@ public class ImageContainer extends GridView implements PanelBase {
         setNumColumns(GridView.AUTO_FIT);
 
         LinearLayout.LayoutParams LLParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+        setFocusable(true);
         loadFiles();
         createView();
-        setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-            }
-        });
+//        setOnItemClickListener(new OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                new ImageViewerDialog(context,
+//                        getContext().getFilesDir().getPath() + "/" + DataStruct.OFFICEAUTODATAFILES + "/" + ImageContainer.this.dataItemMain.getName() + "/" + DataStruct.PHTOTS,
+//                        files.get(position).getName())
+//                .show();
+//            }
+//        });
 
         ViewTreeObserver vto =  getViewTreeObserver();
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -58,6 +66,15 @@ public class ImageContainer extends GridView implements PanelBase {
                 setNumColumns(column);
             }
         });
+    }
+
+    @Override
+    public void finalizePanel(){
+        try {
+            this.finalize();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
     }
 
     @Override
@@ -71,7 +88,7 @@ public class ImageContainer extends GridView implements PanelBase {
     }
 
     private void loadFiles(){
-        String path = getContext().getFilesDir().getPath() + "/" + DataStruct.OFFICEAUTODATAFILES + "/" + dataItemMain.getName() + "/" + DataStruct.VOICE_RECORDS;
+        String path = getContext().getFilesDir().getPath() + "/" + DataStruct.OFFICEAUTODATAFILES + "/" + dataItemMain.getName() + "/" + DataStruct.PHTOTS;
         File file = new File(path);
         File[] files = file.listFiles();
         if(files.length == 0){
@@ -98,7 +115,7 @@ public class ImageContainer extends GridView implements PanelBase {
         };
 
         for(int i = 0; i < files.size(); i++){
-            ContentRecordItem contentRecordItem = new ContentRecordItem(getContext(), files.get(i));
+            ContentRecordItem contentRecordItem = new ImageContentRecordItem(getContext(), files.get(i));
             contentRecordItem.setRecordImage();
             contentRecordItem.setDeleteClick(onClickListener);
             contentRecordItems.add(contentRecordItem);

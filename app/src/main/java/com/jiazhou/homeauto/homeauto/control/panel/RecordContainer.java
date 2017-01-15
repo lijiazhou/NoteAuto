@@ -10,6 +10,7 @@ import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.jiazhou.homeauto.homeauto.control.features.ImageContentRecordItem;
 import com.jiazhou.homeauto.homeauto.dialog.MusicPlayerDialog;
 import com.jiazhou.homeauto.homeauto.adapter.GridViewAdapter;
 import com.jiazhou.homeauto.homeauto.control.features.ContentRecordItem;
@@ -58,6 +59,13 @@ public class RecordContainer extends GridView implements PanelBase {
         });
     }
 
+    public void finalizePanel(){
+        try {
+            this.finalize();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
     @Override
     public MenuImpBase getMenu() {
         return null;
@@ -96,7 +104,7 @@ public class RecordContainer extends GridView implements PanelBase {
         };
 
         for(int i = 0; i < files.size(); i++){
-            ContentRecordItem contentRecordItem = new ContentRecordItem(getContext(), files.get(i));
+            ContentRecordItem contentRecordItem = new ImageContentRecordItem(getContext(), files.get(i));
             contentRecordItem.setDeleteClick(onClickListener);
             contentRecordItems.add(contentRecordItem);
         }

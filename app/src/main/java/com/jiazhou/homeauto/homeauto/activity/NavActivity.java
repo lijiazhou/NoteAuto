@@ -137,8 +137,6 @@ public class NavActivity extends AppCompatActivity {
         });
     }
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //MenuInflater inflater = getMenuInflater();
@@ -157,8 +155,11 @@ public class NavActivity extends AppCompatActivity {
     }
 
     private void addPanelView(PanelBase panelBase){
-        if(functionPanel.getChildCount() > 0)
+        if(functionPanel.getChildCount() > 0) {
+            PanelBase panelBaseCurrent =  (PanelBase) functionPanel.getChildAt(0);
+            panelBaseCurrent.finalizePanel();
             functionPanel.removeAllViews();
+        }
         functionPanel.addView((View)panelBase);
         panelBase.setMenu(menu, getMenuInflater());
         menuImp = panelBase.getMenu();

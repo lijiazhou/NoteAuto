@@ -17,4 +17,5 @@
     <color name="colorDarkBlue">#1B4F72</color>
     <color name="halfTra">#80000000</color>
     <color name="calOrange">#f39c12</color>
+    <color name="transparent">#00ffffff</color>
 </resources>

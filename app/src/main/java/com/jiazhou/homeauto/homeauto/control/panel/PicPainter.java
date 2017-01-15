@@ -28,6 +28,7 @@ import com.jiazhou.homeauto.homeauto.dialog.CameraDialog;
 import com.jiazhou.homeauto.homeauto.R;
 import com.jiazhou.homeauto.homeauto.control.features.ColorPicker;
 import com.jiazhou.homeauto.homeauto.dataSet.DataStruct;
+import com.jiazhou.homeauto.homeauto.dialog.LoadingDialog;
 import com.jiazhou.homeauto.homeauto.implementation.menuImp.MenuImpBase;
 import com.jiazhou.homeauto.homeauto.implementation.menuImp.PicDrawerMenuImp;
 import com.jiazhou.homeauto.homeauto.interfaces.PanelBase;
@@ -59,6 +60,7 @@ public class PicPainter extends LinearLayout implements PanelBase {
     Context context;
     MediaRecorder mediaRecorder;
     FloatingActionButton fab;
+    boolean mediaStarted;
 
     public  PicPainter(Context context, String parentName){
         this(context, ControlPraser.GetAttr(context, R.layout.control_pic_painter), parentName);
@@ -120,15 +122,6 @@ public class PicPainter extends LinearLayout implements PanelBase {
                             case MotionEvent.ACTION_DOWN:
                                 startX = (int) event.getX();
                                 startY = (int) event.getY();
-                                int width = fab.getWidth();
-                                int height = fab.getHeight();
-                                int _startX = startX + ControlPraser.dip2px(getContext(), 250);
-                                int _startY = startY + ControlPraser.dip2px(getContext(), colorPicker.getHeight());
-                                int x = (int)fab.getX();
-                                int y = (int)fab.getY();
-                                if(_startX > x && _startX < (x + width) && _startY > y && _startY < (y + height) ) {
-                                    fab.callOnClick();
-                                }
                                 break;
                             case MotionEvent.ACTION_MOVE:
                                 int stopX = (int) event.getX();
@@ -240,6 +233,18 @@ public class PicPainter extends LinearLayout implements PanelBase {
     }
 
     @Override
+    public void finalizePanel(){
+        if(mediaRecorder!= null && mediaStarted)
+            stopRecording();
+        save();
+        try {
+            this.finalize();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+    @Override
     public MenuImpBase getMenu() {
         return picDrawerMenuImp;
     }
@@ -308,7 +313,10 @@ public class PicPainter extends LinearLayout implements PanelBase {
         }
 
         mediaRecorder.start();
+        new LoadingDialog(context, 6).show();
         fab.setVisibility(View.VISIBLE);
+        fab.bringToFront();
+        mediaStarted = true;
     }
 
     private void stopRecording() {
@@ -318,6 +326,7 @@ public class PicPainter extends LinearLayout implements PanelBase {
         mediaRecorder.release();
         mediaRecorder = null;
         fab.setVisibility(View.INVISIBLE);
+        mediaStarted = false;
     }
 
     private void turnOnCam(){
@@ -325,7 +334,7 @@ public class PicPainter extends LinearLayout implements PanelBase {
             Toast.makeText(getContext(), "This device has not equipped with a camera!", Toast.LENGTH_LONG);
             return;
         }
-        new CameraDialog(getContext()).show();
+        new CameraDialog(getContext(), parentName).show();
     }
 
     private boolean checkCameraHardware(Context context) {

@@ -12,6 +12,7 @@ import android.hardware.Camera;
 import android.util.AttributeSet;
 import android.util.Xml;
 import android.view.View;
+import android.view.ViewGroup;
 
 import java.lang.reflect.Field;
 
@@ -84,6 +85,14 @@ public class ControlPraser {
     public static int px2dip(Context context, float pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
+    }
+
+    public static void setMargins (View v, int l, int t, int r, int b) {
+        if (v.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
+            ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+            p.setMargins(l, t, r, b);
+            v.requestLayout();
+        }
     }
 }
 

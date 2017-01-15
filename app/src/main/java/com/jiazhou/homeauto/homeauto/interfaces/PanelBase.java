@@ -13,4 +13,5 @@ import java.util.zip.Inflater;
 public interface PanelBase  {
     MenuImpBase getMenu();
     void setMenu(Menu menu, MenuInflater inflater);
+    void finalizePanel();
 }

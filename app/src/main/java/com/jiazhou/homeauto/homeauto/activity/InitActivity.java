@@ -19,6 +19,7 @@ import java.util.Arrays;
 
 public class InitActivity extends AppCompatActivity {
 
+    static boolean started;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +34,15 @@ public class InitActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        started = true;
         startActivity(new Intent(this, NavActivity.class));
         finish();
     }
 
     public void createNewItemData(){
+
+        if(started == true)
+            return ;
         DataItemMain newItem = new DataItemMain("New Document", R.drawable.new_item, null);
         newItem.setIndex(0);
         DataStruct.mainItems.add(newItem);
@@ -59,6 +64,8 @@ public class InitActivity extends AppCompatActivity {
     }
 
     private void getDataFiles() throws Exception {
+        if(started == true)
+            return;
         Thread.sleep(5000);
         File files[]  = new File(getApplicationContext().getFilesDir(), DataStruct.OFFICEAUTODATAFILES).listFiles();
         for(int i = 0; i < files.length; i++){
