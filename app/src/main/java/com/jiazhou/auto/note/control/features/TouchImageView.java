@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.control.features;
+package com.jiazhou.auto.note.control.features;
 
 /**
  * Created by lijiazhou on 14/1/17.

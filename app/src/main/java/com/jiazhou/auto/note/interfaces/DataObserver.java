@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.interfaces;
+package com.jiazhou.auto.note.interfaces;
 
 /**
  * Created by lijiazhou on 18/10/16.

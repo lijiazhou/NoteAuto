@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.dialog;
+package com.jiazhou.auto.note.dialog;
 
 import android.app.Dialog;
 import android.content.Context;

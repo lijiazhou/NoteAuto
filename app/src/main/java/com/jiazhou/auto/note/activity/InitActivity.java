@@ -1,16 +1,13 @@
-package com.jiazhou.homeauto.homeauto.activity;
+package com.jiazhou.auto.note.activity;
 
 import android.content.Intent;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
+import com.jiazhou.auto.note.dataSet.DataStruct;
 import com.jiazhou.homeauto.homeauto.R;
-import com.jiazhou.homeauto.homeauto.dataSet.DataDetectedItem;
-import com.jiazhou.homeauto.homeauto.dataSet.DataItemMain;
-import com.jiazhou.homeauto.homeauto.dataSet.DataStruct;
+import com.jiazhou.auto.note.dataSet.DataDetectedItem;
+import com.jiazhou.auto.note.dataSet.DataItemMain;
 
 import java.io.File;
 

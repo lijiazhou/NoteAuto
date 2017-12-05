@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.control.panel;
+package com.jiazhou.auto.note.control.panel;
 
 import android.content.Context;
 import android.view.Menu;
@@ -10,15 +10,15 @@ import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.jiazhou.homeauto.homeauto.control.features.ImageContentRecordItem;
-import com.jiazhou.homeauto.homeauto.dialog.MusicPlayerDialog;
-import com.jiazhou.homeauto.homeauto.adapter.GridViewAdapter;
-import com.jiazhou.homeauto.homeauto.control.features.ContentRecordItem;
-import com.jiazhou.homeauto.homeauto.dataSet.DataItemMain;
-import com.jiazhou.homeauto.homeauto.dataSet.DataStruct;
-import com.jiazhou.homeauto.homeauto.implementation.menuImp.MenuImpBase;
-import com.jiazhou.homeauto.homeauto.interfaces.PanelBase;
-import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
+import com.jiazhou.auto.note.control.features.ContentRecordItem;
+import com.jiazhou.auto.note.control.features.ImageContentRecordItem;
+import com.jiazhou.auto.note.dataSet.DataStruct;
+import com.jiazhou.auto.note.implementation.menuImp.MenuImpBase;
+import com.jiazhou.auto.note.interfaces.PanelBase;
+import com.jiazhou.auto.note.utility.ControlPraser;
+import com.jiazhou.auto.note.dialog.MusicPlayerDialog;
+import com.jiazhou.auto.note.adapter.GridViewAdapter;
+import com.jiazhou.auto.note.dataSet.DataItemMain;
 
 import java.io.File;
 import java.util.ArrayList;

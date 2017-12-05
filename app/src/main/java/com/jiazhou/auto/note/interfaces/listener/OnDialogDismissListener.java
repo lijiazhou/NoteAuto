@@ -1,8 +1,8 @@
-package com.jiazhou.homeauto.homeauto.interfaces.listener;
+package com.jiazhou.auto.note.interfaces.listener;
 
 import android.app.Dialog;
 
-import com.jiazhou.homeauto.homeauto.dataSet.DataItemMain;
+import com.jiazhou.auto.note.dataSet.DataItemMain;
 
 /**
  * Created by lijiazhou on 9/11/16.

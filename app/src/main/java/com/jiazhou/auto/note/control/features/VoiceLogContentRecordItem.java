@@ -1,8 +1,6 @@
-package com.jiazhou.homeauto.homeauto.control.features;
+package com.jiazhou.auto.note.control.features;
 
 import android.content.Context;
-import android.media.audiofx.AudioEffect;
-import android.media.audiofx.Visualizer;
 
 import java.io.File;
 

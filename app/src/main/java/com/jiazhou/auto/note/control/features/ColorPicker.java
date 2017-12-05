@@ -1,7 +1,6 @@
-package com.jiazhou.homeauto.homeauto.control.features;
+package com.jiazhou.auto.note.control.features;
 
 import android.content.Context;
-import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
@@ -11,9 +10,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.jiazhou.auto.note.interfaces.listener.OnColorPickListener;
+import com.jiazhou.auto.note.utility.ControlPraser;
 import com.jiazhou.homeauto.homeauto.R;
-import com.jiazhou.homeauto.homeauto.interfaces.listener.OnColorPickListener;
-import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
 
 /**
  * Created by lijiazhou on 2/11/16.

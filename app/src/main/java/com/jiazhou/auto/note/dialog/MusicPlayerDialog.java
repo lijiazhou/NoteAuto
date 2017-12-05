@@ -1,23 +1,16 @@
-package com.jiazhou.homeauto.homeauto.dialog;
+package com.jiazhou.auto.note.dialog;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.media.MediaPlayer;
-import android.view.View;
-import android.widget.Button;
-import android.widget.SeekBar;
-import android.widget.Toast;
 
+import com.jiazhou.auto.note.control.features.WaveformView;
+import com.jiazhou.auto.note.dataSet.SoundFile;
+import com.jiazhou.auto.note.utility.ControlPraser;
 import com.jiazhou.homeauto.homeauto.R;
-import com.jiazhou.homeauto.homeauto.control.features.WaveformView;
-import com.jiazhou.homeauto.homeauto.dataSet.SoundFile;
-import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
 
 import java.io.IOException;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * Created by lijiazhou on 10/12/16.

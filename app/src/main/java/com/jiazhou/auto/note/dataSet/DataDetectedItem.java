@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.dataSet;
+package com.jiazhou.auto.note.dataSet;
 
 /**
  * Created by lijiazhou on 18/10/16.

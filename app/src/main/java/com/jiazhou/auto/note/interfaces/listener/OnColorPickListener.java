@@ -1,6 +1,5 @@
-package com.jiazhou.homeauto.homeauto.interfaces.listener;
+package com.jiazhou.auto.note.interfaces.listener;
 
-import android.graphics.Paint;
 import android.view.View;
 
 

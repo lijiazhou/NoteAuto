@@ -1,6 +1,5 @@
-package com.jiazhou.homeauto.homeauto.implementation.menuImp;
+package com.jiazhou.auto.note.implementation.menuImp;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.Menu;
 

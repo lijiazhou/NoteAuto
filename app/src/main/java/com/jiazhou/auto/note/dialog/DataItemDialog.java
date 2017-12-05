@@ -1,22 +1,18 @@
-package com.jiazhou.homeauto.homeauto.dialog;
+package com.jiazhou.auto.note.dialog;
 
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Context;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.jiazhou.auto.note.dataSet.DataStruct;
+import com.jiazhou.auto.note.utility.ControlPraser;
 import com.jiazhou.homeauto.homeauto.R;
-import com.jiazhou.homeauto.homeauto.dataSet.DataDetectedItem;
-import com.jiazhou.homeauto.homeauto.dataSet.DataItemMain;
-import com.jiazhou.homeauto.homeauto.dataSet.DataStruct;
-import com.jiazhou.homeauto.homeauto.interfaces.listener.OnDialogDismissListener;
-import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
+import com.jiazhou.auto.note.dataSet.DataDetectedItem;
+import com.jiazhou.auto.note.dataSet.DataItemMain;
+import com.jiazhou.auto.note.interfaces.listener.OnDialogDismissListener;
 
 import java.util.ArrayList;
 

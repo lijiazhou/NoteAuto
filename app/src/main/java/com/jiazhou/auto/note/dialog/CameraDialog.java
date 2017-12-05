@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.dialog;
+package com.jiazhou.auto.note.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -8,10 +8,10 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.jiazhou.auto.note.dataSet.DataStruct;
 import com.jiazhou.homeauto.homeauto.R;
-import com.jiazhou.homeauto.homeauto.control.features.CameraPreview;
-import com.jiazhou.homeauto.homeauto.dataSet.DataStruct;
-import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
+import com.jiazhou.auto.note.control.features.CameraPreview;
+import com.jiazhou.auto.note.utility.ControlPraser;
 
 import java.io.File;
 import java.io.FileNotFoundException;

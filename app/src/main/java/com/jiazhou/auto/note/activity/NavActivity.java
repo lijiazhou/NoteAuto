@@ -1,7 +1,6 @@
-package com.jiazhou.homeauto.homeauto.activity;
+package com.jiazhou.auto.note.activity;
 
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -13,18 +12,18 @@ import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
 
-import com.jiazhou.homeauto.homeauto.dialog.DataItemDialog;
+import com.jiazhou.auto.note.control.panel.PicPainter;
+import com.jiazhou.auto.note.control.panel.RecordContainer;
+import com.jiazhou.auto.note.dataSet.DataStruct;
+import com.jiazhou.auto.note.dialog.DataItemDialog;
+import com.jiazhou.auto.note.implementation.menuImp.MenuImpBase;
+import com.jiazhou.auto.note.interfaces.PanelBase;
+import com.jiazhou.auto.note.interfaces.listener.OnDialogDismissListener;
+import com.jiazhou.auto.note.utility.ControlPraser;
 import com.jiazhou.homeauto.homeauto.R;
-import com.jiazhou.homeauto.homeauto.adapter.NavAdapter;
-import com.jiazhou.homeauto.homeauto.control.panel.ImageContainer;
-import com.jiazhou.homeauto.homeauto.control.panel.PicPainter;
-import com.jiazhou.homeauto.homeauto.control.panel.RecordContainer;
-import com.jiazhou.homeauto.homeauto.dataSet.DataItemMain;
-import com.jiazhou.homeauto.homeauto.dataSet.DataStruct;
-import com.jiazhou.homeauto.homeauto.implementation.menuImp.MenuImpBase;
-import com.jiazhou.homeauto.homeauto.interfaces.PanelBase;
-import com.jiazhou.homeauto.homeauto.interfaces.listener.OnDialogDismissListener;
-import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
+import com.jiazhou.auto.note.adapter.NavAdapter;
+import com.jiazhou.auto.note.control.panel.ImageContainer;
+import com.jiazhou.auto.note.dataSet.DataItemMain;
 
 import java.io.File;
 

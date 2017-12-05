@@ -1,8 +1,8 @@
-package com.jiazhou.homeauto.homeauto.dataSet;
+package com.jiazhou.auto.note.dataSet;
 
 import android.content.Context;
 
-import com.jiazhou.homeauto.homeauto.control.nav.NavItemHeader;
+import com.jiazhou.auto.note.control.nav.NavItemHeader;
 
 import java.util.ArrayList;
 

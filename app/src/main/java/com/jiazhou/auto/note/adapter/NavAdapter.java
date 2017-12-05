@@ -1,11 +1,11 @@
-package com.jiazhou.homeauto.homeauto.adapter;
+package com.jiazhou.auto.note.adapter;
 
 
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 
-import com.jiazhou.homeauto.homeauto.control.nav.NavItemHeader;
+import com.jiazhou.auto.note.control.nav.NavItemHeader;
 
 import java.util.List;
 

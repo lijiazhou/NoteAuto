@@ -1,8 +1,8 @@
-package com.jiazhou.homeauto.homeauto.control.features;
+package com.jiazhou.auto.note.control.features;
 
 import android.content.Context;
 
-import com.jiazhou.homeauto.homeauto.dialog.ImageViewerDialog;
+import com.jiazhou.auto.note.dialog.ImageViewerDialog;
 
 import java.io.File;
 

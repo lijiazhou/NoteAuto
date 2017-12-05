@@ -1,19 +1,18 @@
-package com.jiazhou.homeauto.homeauto.dialog;
+package com.jiazhou.auto.note.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.jiazhou.auto.note.control.features.TouchImageView;
+import com.jiazhou.auto.note.utility.ControlPraser;
 import com.jiazhou.homeauto.homeauto.R;
-import com.jiazhou.homeauto.homeauto.control.features.TouchImageView;
-import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
 
 import java.io.File;
 

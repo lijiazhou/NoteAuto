@@ -1,7 +1,6 @@
-package com.jiazhou.homeauto.homeauto.control.features;
+package com.jiazhou.auto.note.control.features;
 
 import android.content.Context;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.view.KeyEvent;

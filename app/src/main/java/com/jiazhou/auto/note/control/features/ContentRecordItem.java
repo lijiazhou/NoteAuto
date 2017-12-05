@@ -1,17 +1,16 @@
-package com.jiazhou.homeauto.homeauto.control.features;
+package com.jiazhou.auto.note.control.features;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.jiazhou.auto.note.utility.ControlPraser;
 import com.jiazhou.homeauto.homeauto.R;
-import com.jiazhou.homeauto.homeauto.interfaces.listener.OnContentClick;
-import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
+import com.jiazhou.auto.note.interfaces.listener.OnContentClick;
 
 import java.io.File;
 

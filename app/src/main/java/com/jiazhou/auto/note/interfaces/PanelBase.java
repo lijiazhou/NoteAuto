@@ -1,11 +1,9 @@
-package com.jiazhou.homeauto.homeauto.interfaces;
+package com.jiazhou.auto.note.interfaces;
 
 import android.view.Menu;
 import android.view.MenuInflater;
 
-import com.jiazhou.homeauto.homeauto.implementation.menuImp.MenuImpBase;
-
-import java.util.zip.Inflater;
+import com.jiazhou.auto.note.implementation.menuImp.MenuImpBase;
 
 /**
  * Created by lijiazhou on 5/11/16.

@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.adapter;
+package com.jiazhou.auto.note.adapter;
 
 import android.view.View;
 import android.view.ViewGroup;

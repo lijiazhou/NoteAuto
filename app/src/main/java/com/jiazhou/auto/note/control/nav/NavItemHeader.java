@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.control.nav;
+package com.jiazhou.auto.note.control.nav;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,10 +6,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.jiazhou.auto.note.utility.ControlPraser;
 import com.jiazhou.homeauto.homeauto.R;
-import com.jiazhou.homeauto.homeauto.dataSet.DataItemMain;
-import com.jiazhou.homeauto.homeauto.interfaces.DataObserver;
-import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
+import com.jiazhou.auto.note.dataSet.DataItemMain;
+import com.jiazhou.auto.note.interfaces.DataObserver;
 
 import java.util.ArrayList;
 

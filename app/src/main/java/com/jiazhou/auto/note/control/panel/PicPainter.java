@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.control.panel;
+package com.jiazhou.auto.note.control.panel;
 
 import android.app.Activity;
 import android.content.Context;
@@ -23,17 +23,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.jiazhou.homeauto.homeauto.dialog.CalculatorDialog;
-import com.jiazhou.homeauto.homeauto.dialog.CameraDialog;
+import com.jiazhou.auto.note.control.features.ColorPicker;
+import com.jiazhou.auto.note.dataSet.DataStruct;
+import com.jiazhou.auto.note.dialog.CalculatorDialog;
+import com.jiazhou.auto.note.dialog.CameraDialog;
+import com.jiazhou.auto.note.dialog.LoadingDialog;
+import com.jiazhou.auto.note.implementation.menuImp.MenuImpBase;
+import com.jiazhou.auto.note.implementation.menuImp.PicDrawerMenuImp;
+import com.jiazhou.auto.note.interfaces.PanelBase;
+import com.jiazhou.auto.note.interfaces.listener.OnColorPickListener;
+import com.jiazhou.auto.note.utility.ControlPraser;
 import com.jiazhou.homeauto.homeauto.R;
-import com.jiazhou.homeauto.homeauto.control.features.ColorPicker;
-import com.jiazhou.homeauto.homeauto.dataSet.DataStruct;
-import com.jiazhou.homeauto.homeauto.dialog.LoadingDialog;
-import com.jiazhou.homeauto.homeauto.implementation.menuImp.MenuImpBase;
-import com.jiazhou.homeauto.homeauto.implementation.menuImp.PicDrawerMenuImp;
-import com.jiazhou.homeauto.homeauto.interfaces.PanelBase;
-import com.jiazhou.homeauto.homeauto.interfaces.listener.OnColorPickListener;
-import com.jiazhou.homeauto.homeauto.utility.ControlPraser;
 
 import java.io.File;
 import java.io.FileOutputStream;

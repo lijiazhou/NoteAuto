@@ -1,8 +1,6 @@
-package com.jiazhou.homeauto.homeauto.dataSet;
+package com.jiazhou.auto.note.dataSet;
 
-import com.jiazhou.homeauto.homeauto.interfaces.DataObserver;
-
-import java.io.File;
+import com.jiazhou.auto.note.interfaces.DataObserver;
 
 /**
  * Created by lijiazhou on 18/10/16.

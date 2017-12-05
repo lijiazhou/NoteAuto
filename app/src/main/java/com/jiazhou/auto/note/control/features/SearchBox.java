@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.control.features;
+package com.jiazhou.auto.note.control.features;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -9,17 +9,14 @@ import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.EditText;
+import android.support.v7.widget.AppCompatEditText;
 import android.widget.TextView;
-
 import com.jiazhou.homeauto.homeauto.R;
-
-import java.util.jar.Attributes;
 
 /**
  * Created by lijiazhou on 7/11/16.
  */
-public class SearchBox extends EditText {
+public class SearchBox extends AppCompatEditText {
 
     private static final int MAX_LENGTH = 10;
 

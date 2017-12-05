@@ -8,7 +8,7 @@
         android:layout_height="20dp"
         android:background="@color/colorPrimaryDark"/>
 
-    <com.jiazhou.homeauto.homeauto.control.features.TouchImageView
+    <com.jiazhou.auto.note.control.features.TouchImageView
         android:id="@+id/photoZoomView"
         android:layout_width="match_parent"
         android:layout_height="700dp"

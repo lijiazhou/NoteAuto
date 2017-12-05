@@ -1,4 +1,4 @@
-package com.jiazhou.homeauto.homeauto.dataSet;
+package com.jiazhou.auto.note.dataSet;
 
 import java.util.ArrayList;
 
