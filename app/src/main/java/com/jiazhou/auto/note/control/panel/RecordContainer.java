@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.jiazhou.auto.note.control.features.ContentRecordItem;
-import com.jiazhou.auto.note.control.features.ImageContentRecordItem;
+import com.jiazhou.auto.note.control.features.VoiceLogContentRecordItem;
 import com.jiazhou.auto.note.dataSet.DataStruct;
 import com.jiazhou.auto.note.implementation.menuImp.MenuImpBase;
 import com.jiazhou.auto.note.interfaces.PanelBase;
@@ -104,9 +104,10 @@ public class RecordContainer extends GridView implements PanelBase {
         };
 
         for(int i = 0; i < files.size(); i++){
-            ContentRecordItem contentRecordItem = new ImageContentRecordItem(getContext(), files.get(i));
+            ContentRecordItem contentRecordItem = new VoiceLogContentRecordItem(getContext(), files.get(i));
             contentRecordItem.setDeleteClick(onClickListener);
             contentRecordItems.add(contentRecordItem);
+
         }
         setAdapter();
     }

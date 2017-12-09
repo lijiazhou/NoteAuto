@@ -2,6 +2,8 @@ package com.jiazhou.auto.note.control.features;
 
 import android.content.Context;
 
+import com.jiazhou.auto.note.dialog.MusicPlayerDialog;
+
 import java.io.File;
 
 /**
@@ -16,6 +18,6 @@ public class VoiceLogContentRecordItem extends ContentRecordItem {
 
     @Override
     public void onContentClick() {
-
+        new MusicPlayerDialog(context, file.getPath()).show();
     }
 }

@@ -16,6 +16,7 @@ public class ImageContentRecordItem extends ContentRecordItem {
     public ImageContentRecordItem(Context context, File file){
         super(context, file);
     }
+
     @Override
     public void onContentClick() {
         new ImageViewerDialog(context, file.getPath().replace(file.getName(), ""), file.getName()).show();

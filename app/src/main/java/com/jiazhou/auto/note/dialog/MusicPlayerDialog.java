@@ -31,7 +31,8 @@ public class MusicPlayerDialog extends Dialog {
         waveformView = ControlPraser.PraserControl(this, R.id.waveform);
 
         loadingLastUpdateTime = getCurrentTime();
-        //waveformView.setSoundFile();
+        //waveformView.setSoundFile(musicFile);
+        this.initializeSoundFile(musicFile);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progressDialog.setTitle("Loading...");
         progressDialog.setCancelable(true);
@@ -43,6 +44,7 @@ public class MusicPlayerDialog extends Dialog {
                     }
                 });
         progressDialog.show();
+
     }
 
     private long getCurrentTime() {

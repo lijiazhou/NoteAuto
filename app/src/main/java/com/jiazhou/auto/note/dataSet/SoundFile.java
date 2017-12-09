@@ -89,14 +89,14 @@ public class SoundFile {
         if (!f.exists()) {
             throw new java.io.FileNotFoundException(fileName);
         }
-        String name = f.getName().toLowerCase();
-        String[] components = name.split("\\.");
-        if (components.length < 2) {
-            return null;
-        }
-        if (!Arrays.asList(getSupportedExtensions()).contains(components[components.length - 1])) {
-            return null;
-        }
+//        String name = f.getName().toLowerCase();
+//        String[] components = name.split("\\.");
+//        if (components.length < 2) {
+//            return null;
+//        }
+//        if (!Arrays.asList(getSupportedExtensions()).contains(components[components.length - 1])) {
+//            return null;
+//        }
         SoundFile soundFile = new SoundFile();
         soundFile.setProgressListener(progressListener);
         soundFile.ReadFile(f);
@@ -262,7 +262,7 @@ public class SoundFile {
                             codec.stop();
                             codec.release();
                             codec = null;
-                            return;
+                            break;
                         }
                     }
                 }
@@ -378,6 +378,7 @@ public class SoundFile {
                     ((float)getSamplesPerFrame() / mSampleRate));
         }
         mDecodedSamples.rewind();
+        mProgressListener.reportProgress(1);
         // DumpSamples();  // Uncomment this line to dump the samples in a TSV file.
     }
 
